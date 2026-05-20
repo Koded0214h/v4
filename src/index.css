@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none !important;
+}
+
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.33%); }
+}
+@keyframes marqueeRight {
+  from { transform: translateX(-33.33%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes floatStar {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(20deg); }
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
