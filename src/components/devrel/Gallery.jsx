@@ -22,8 +22,8 @@ const ITEMS = [
   { src: unipod,      caption: "AI UniPod, UNILAG",                   span: 1 },
   { src: dayDream,    caption: "Community Moment",                    span: 2 },
   { src: img1,        caption: "Community Event",                     span: 1 },
-  { src: img2,        caption: "Hackathon",                           span: 1 },
-  { src: randomField, caption: "Out in the Field",                    span: 1 },
+  { src: img2,        caption: "Presentation",                        span: 1 },
+  { src: randomField, caption: "Best Tech Bro in Computer Science",   span: 1 },
   { src: img3,        caption: "Workshop Session",                    span: 1 },
   { src: img4,        caption: "Conference",                          span: 2 },
 ];

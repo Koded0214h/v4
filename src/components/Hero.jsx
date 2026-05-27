@@ -198,6 +198,23 @@ export default function Hero({ activeTab = 'DEV' }) {
               onMouseEnter={e => { e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "rgba(184,12,9,0.5)"; }}
               onMouseLeave={e => { e.currentTarget.style.color = "#888"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; }}
             >{isDevRel ? "My Work" : "Meet Me"}</a>
+            <a
+              href={isDevRel ? "/resume-devrel.pdf" : "/resume-dev.pdf"}
+              download
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 7,
+                padding: "11px 22px", borderRadius: 6, backgroundColor: "transparent",
+                color: "#666", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em",
+                textDecoration: "none", border: "1px solid rgba(255,255,255,0.08)", transition: "color 0.2s, border-color 0.2s",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.color = "#ccc"; e.currentTarget.style.borderColor = "rgba(184,12,9,0.4)"; }}
+              onMouseLeave={e => { e.currentTarget.style.color = "#666"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; }}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Resume
+            </a>
           </motion.div>
         </div>
 

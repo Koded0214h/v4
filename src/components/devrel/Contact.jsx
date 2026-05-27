@@ -6,8 +6,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 const LINKS = [
-  { Icon: SiGithub,   label: "GitHub",   sub: "github.com/ladicodes",      href: "https://github.com/ladicodes" },
-  { Icon: FaLinkedin, label: "LinkedIn",  sub: "in/ladicodes",              href: "https://www.linkedin.com/in/ladicodes" },
+  { Icon: SiGithub,   label: "GitHub",   sub: "github.com/LADICODEZ",      href: "https://github.com/LADICODEZ" },
+  { Icon: FaLinkedin, label: "LinkedIn",  sub: "in/LADICODEZ",              href: "https://www.linkedin.com/in/LADICODEZ" },
   { Icon: FaTwitter,  label: "Twitter",   sub: "@ladicodez",                href: "https://www.x.com/ladicodez" },
 ];
 

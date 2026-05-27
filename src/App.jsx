@@ -12,18 +12,21 @@ import Gallery from './components/devrel/Gallery'
 import Philosophy from './components/devrel/Philosophy'
 import Contact from './components/devrel/Contact'
 import { MouseTrackerProvider, Pointer, PointerFollower } from './components/Cursor'
+import FloatingVideo from './components/FloatingVideo'
 import { BsLightningChargeFill, BsArrowUpRight } from 'react-icons/bs'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useBreakpoint } from './hooks/useBreakpoint'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('DEV')
   const [cursorMode, setCursorMode] = useState('default') // 'default' | 'image' | 'link'
+  const { isDesktop } = useBreakpoint()
 
   return (
     <MouseTrackerProvider style={{ minHeight: '100vh' }}>
 
-      {/* Cursor icon */}
-      <Pointer>
+      {/* Cursor icon — desktop only */}
+      {isDesktop && <Pointer>
         <AnimatePresence mode="wait">
           {cursorMode === 'image' ? (
             <motion.div
@@ -86,10 +89,10 @@ export default function App() {
             </motion.div>
           )}
         </AnimatePresence>
-      </Pointer>
+      </Pointer>}
 
-      {/* Follower label */}
-      <PointerFollower align="bottom-right">
+      {/* Follower label — desktop only */}
+      {isDesktop && <PointerFollower align="bottom-right">
         <AnimatePresence mode="wait">
           <motion.span
             key={cursorMode}
@@ -111,10 +114,10 @@ export default function App() {
               whiteSpace: 'nowrap',
             }}
           >
-            {cursorMode === 'image' ? 'View' : cursorMode === 'link' ? 'OPEN ↗' : 'LADICODES'}
+            {cursorMode === 'image' ? 'View' : cursorMode === 'link' ? 'OPEN ↗' : 'LADICODEZ'}
           </motion.span>
         </AnimatePresence>
-      </PointerFollower>
+      </PointerFollower>}
 
       <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
       <Hero activeTab={activeTab} />
@@ -164,6 +167,8 @@ export default function App() {
         onLinkHover={() => setCursorMode('link')}
         onLinkLeave={() => setCursorMode('default')}
       />
+
+      <FloatingVideo />
 
     </MouseTrackerProvider>
   )

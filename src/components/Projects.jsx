@@ -4,18 +4,7 @@ import { useBreakpoint } from "../hooks/useBreakpoint";
 import { SiGithub } from "react-icons/si";
 import { BsArrowUpRight } from "react-icons/bs";
 
-// Swap null for an imported screenshot, e.g. import vitalAidImg from "../assets/vitalaid.png"
-// Fill in github/live URLs when ready — null hides the link
 const PROJECTS = [
-  {
-    image: null,
-    tag: "Healthcare · AI · USSD",
-    name: "Vital Aid",
-    description:
-      "Emergency healthcare platform providing AI-powered first aid guidance, nearest hospital recommendations by emergency type, and USSD access for users without smartphones.",
-    github: null,
-    live: null,
-  },
   {
     image: null,
     tag: "Fintech · Behavioural",
@@ -23,16 +12,25 @@ const PROJECTS = [
     description:
       "Financial accountability system where users stake money on personal goals. Failure triggers penalties redistributed to successful users — a behavioural incentive engine for consistency.",
     github: null,
-    live: null,
+    live: "https://s-gold-phi.vercel.app/",
   },
   {
     image: null,
-    tag: "Healthcare · AI · USSD",
-    name: "E-Mama Care",
+    tag: "AI · Risk Intelligence",
+    name: "RiskGuard AI",
     description:
-      "Maternal health platform supporting pregnant women with real-time medical guidance, hospital bed tracking, stage-based notifications, and offline USSD access.",
+      "AI-powered risk intelligence platform that analyses and surfaces threats in real time, helping teams make faster, more confident decisions under uncertainty.",
     github: null,
-    live: null,
+    live: "https://riskguard-ai-nine.vercel.app/",
+  },
+  {
+    image: null,
+    tag: "Education · Community",
+    name: "Hackademy Portal",
+    description:
+      "Squad's developer education portal powering hackathons, learning tracks, and community cohorts — connecting builders across Africa with structured growth programs.",
+    github: null,
+    live: "https://hackademy-portal.squadinc.co",
   },
   {
     image: null,
@@ -41,7 +39,7 @@ const PROJECTS = [
     description:
       "Platform for persons with disabilities to showcase skills, connect with global organisations and NGOs, and access opportunities — built around inclusion and visibility.",
     github: null,
-    live: null,
+    live: "https://echo-bridge-frontend.vercel.app/",
   },
 ];
 

@@ -2,8 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useBreakpoint } from "../hooks/useBreakpoint";
 import { SiGithub } from "react-icons/si";
-import { FaLinkedin, FaTwitter } from "react-icons/fa";
-import { BsFileText } from "react-icons/bs";
+import { FaLinkedin, FaTwitter, FaDev } from "react-icons/fa";
 
 function TextHoverEffect({ text }) {
   const svgRef = useRef(null);
@@ -101,7 +100,7 @@ const SOCIALS = [
   { Icon: SiGithub,   label: "GitHub",   href: "https://github.com/ladicodes" },
   { Icon: FaLinkedin, label: "LinkedIn",  href: "https://www.linkedin.com/in/ladicodes" },
   { Icon: FaTwitter,  label: "Twitter",   href: "https://www.x.com/ladicodez" },
-  { Icon: BsFileText, label: "Dev.to",    href: "https://dev.to/ladicodes" },
+  { Icon: FaDev,      label: "Dev.to",    href: "https://dev.to/ladipo_samuel_7cfaa827bf5" },
 ];
 
 const fadeUp = {
