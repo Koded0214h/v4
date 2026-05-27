@@ -189,15 +189,6 @@ export default function Hero({ activeTab = 'DEV' }) {
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = "#ff0000"; e.currentTarget.style.boxShadow = "0 0 36px rgba(255,0,0,0.55)"; }}
               onMouseLeave={e => { e.currentTarget.style.backgroundColor = "#b80c09"; e.currentTarget.style.boxShadow = "0 0 24px rgba(184,12,9,0.45)"; }}
             >{isDevRel ? "Let's Talk" : "Contact"}</a>
-            <a href="#about" style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              padding: "11px 28px", borderRadius: 6, backgroundColor: "transparent",
-              color: "#888", fontSize: 14, fontWeight: 600, letterSpacing: "0.04em",
-              textDecoration: "none", border: "1px solid rgba(255,255,255,0.1)", transition: "color 0.2s, border-color 0.2s",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "rgba(184,12,9,0.5)"; }}
-              onMouseLeave={e => { e.currentTarget.style.color = "#888"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; }}
-            >{isDevRel ? "My Work" : "Meet Me"}</a>
             <a
               href={isDevRel ? "/resume-devrel.pdf" : "/resume-dev.pdf"}
               download
