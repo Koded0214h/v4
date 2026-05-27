@@ -4,12 +4,24 @@ import { useBreakpoint } from "../hooks/useBreakpoint";
 
 export default function FloatingVideo() {
   const videoRef = useRef(null);
-  const [muted, setMuted] = useState(true); // starts muted (browser requires it for autoplay)
+  const [muted, setMuted] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const { isMobile, isTablet } = useBreakpoint();
   const isNarrow = isMobile || isTablet;
 
-  // Sync muted state → DOM (React's muted prop doesn't update after mount)
+  // Try to play with sound; if browser blocks it, fall back to muted
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = false;
+    v.play().catch(() => {
+      v.muted = true;
+      setMuted(true);
+      v.play().catch(() => {});
+    });
+  }, []);
+
+  // Sync muted toggle → DOM
   useEffect(() => {
     if (videoRef.current) videoRef.current.muted = muted;
   }, [muted]);
@@ -47,7 +59,6 @@ export default function FloatingVideo() {
             ref={videoRef}
             src="/intro.mp4"
             autoPlay
-            muted
             loop
             playsInline
             preload="metadata"
