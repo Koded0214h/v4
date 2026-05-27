@@ -33,6 +33,7 @@ function ImageSlot({ src, index, hoveredIndex, onEnter, onLeave, onImageHover, o
       style={{ flexShrink: 0, height: "100%", borderRadius: 6, overflow: "hidden", position: "relative" }}
     >
       <motion.img src={src} alt={`About ${index + 1}`}
+        loading="lazy"
         animate={{ scale: isHovered ? 1.07 : 1 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}

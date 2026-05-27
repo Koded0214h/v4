@@ -160,10 +160,10 @@ export default function TechStack() {
       </motion.div>
 
       {/* Strips */}
-      <div style={{ padding: isMobile ? "0 0 56px" : "0 0 80px", display: "flex", flexDirection: "column", gap: isMobile ? 12 : 16 }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", width: "100%", padding: isMobile ? "0 20px 56px" : "0 24px 80px", display: "flex", flexDirection: "column", gap: isMobile ? 12 : 16 }}>
 
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8, padding: isMobile ? "0 20px" : "0 24px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
             <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.18em", color: "#9e0a08", textTransform: "uppercase" }}>
               Languages &amp; Frameworks
             </span>
@@ -173,7 +173,7 @@ export default function TechStack() {
         </div>
 
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8, padding: isMobile ? "0 20px" : "0 24px", justifyContent: "flex-end" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8, justifyContent: "flex-end" }}>
             <div style={{ flex: 1, height: 1, background: "linear-gradient(270deg, rgba(184,12,9,0.3), transparent)" }} />
             <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.18em", color: "#9e0a08", textTransform: "uppercase" }}>
               Cloud · AI · Web3

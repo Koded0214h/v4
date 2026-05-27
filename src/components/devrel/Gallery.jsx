@@ -58,6 +58,7 @@ function GalleryCell({ item, index, onOpen, onImageHover, onImageLeave }) {
       <motion.img
         src={item.src}
         alt={item.caption}
+        loading="lazy"
         animate={{ scale: hov ? 1.04 : 1 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
